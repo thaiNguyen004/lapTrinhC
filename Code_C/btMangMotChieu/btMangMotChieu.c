@@ -90,4 +90,5 @@ int main() {
 	else {
 		printf("arrCon khong la Mang con cua Arr");
 	}*/
+	mangKhongGiamDaiNhat(a,n);
 }
