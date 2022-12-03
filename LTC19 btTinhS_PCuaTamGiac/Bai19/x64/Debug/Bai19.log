@@ -1,6 +1,0 @@
-﻿  Bai19.cpp
-F:\C++\Bai19\Bai19\Bai19.cpp(44,14): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-F:\C++\Bai19\Bai19\Bai19.cpp(45,14): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-F:\C++\Bai19\Bai19\Bai19.cpp(46,14): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-F:\C++\Bai19\Bai19\Bai19.cpp(65,19): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-  Bai19.vcxproj -> F:\C++\Bai19\x64\Debug\Bai19.exe

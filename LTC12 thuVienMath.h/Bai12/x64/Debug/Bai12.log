@@ -1,3 +1,0 @@
-﻿  Bai12.cpp
-F:\C++\Bai12\Bai12\Bai12.cpp(16,9): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'double'
-  Bai12.vcxproj -> F:\C++\Bai12\x64\Debug\Bai12.exe

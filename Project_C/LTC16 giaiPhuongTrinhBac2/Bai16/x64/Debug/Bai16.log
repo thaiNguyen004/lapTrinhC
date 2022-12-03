@@ -1,0 +1,5 @@
+﻿  Bai16.cpp
+F:\C++\Bai16\Bai16\Bai16.cpp(22,21): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+F:\C++\Bai16\Bai16\Bai16.cpp(24,28): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+F:\C++\Bai16\Bai16\Bai16.cpp(25,28): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  Bai16.vcxproj -> F:\C++\Bai16\x64\Debug\Bai16.exe

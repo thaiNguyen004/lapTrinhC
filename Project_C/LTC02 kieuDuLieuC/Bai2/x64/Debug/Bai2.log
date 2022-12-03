@@ -1,0 +1,3 @@
+﻿  Bai2.cpp
+F:\C++\Bai2\Bai2\Bai2.cpp(21,17): error C2371: 'c': redefinition; different basic types
+F:\C++\Bai2\Bai2\Bai2.cpp(16): message : see declaration of 'c'
