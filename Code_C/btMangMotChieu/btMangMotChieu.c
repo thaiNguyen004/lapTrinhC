@@ -51,169 +51,43 @@ int kiemTraMangCon(int x[], int n) {
 	return ketQua;
 }
 //Kiem tra mang con dai nhat
-void kiemTraMangConDaiNhat(int x[], int n, int arr1[], int arr2[], int arr3[], int j, int k, int l) {
-	int ketQua1 = 1;
-	int ketQua2 = 1;
-	int ketQua3 = 1;
-	for (int i = 0; i < n; i++)
-	{
-		if (x[i] == arr1[0]) {
-			for (int ij = 0; ij < j; ij++)
-			{
-				if (arr1[ij] != x[i + ij]) {
-					ketQua1 = 0;
-				}
-			}
-		}
+int timMax(int x[], int n){
+	int max=x[0];
+	for(int i=0;i<n;i++){
+			if(max<x[i])max=x[i];
 	}
-	for (int i = 0; i < n; i++)
-	{
-		if (x[i] == arr2[0]) {
-			for (int ik = 0; ik < k; ik++)
-			{
-				if (arr1[ik] != x[i + ik]) {
-					ketQua2 = 0;
-				}
-			}
-		}
-	}
-	for (int i = 0; i < n; i++)
-	{
-		if (x[i] == arr3[0]) {
-			for (int il = 0; il < l; il++)
-			{
-				if (arr1[il] != x[i + il]) {
-					ketQua3 = 0;
-				}
-			}
-		}
-	}
-	if (ketQua1 == 1) {
-		if (ketQua2 == 1) {
-			if (ketQua3 == 1) {
-				int max = j;
-				if (max < k) {
-					max = k;
-					printf("Mang 2 lon nhat");
-				}
-				else if (max < l) {
-					max = l;
-					printf("Mang 3 lon nhat");
-				}
-				else {
-					printf("Mang 1 lon nhat");
-				}
-				
-			}
-			int max = j;
-			if (max < k) {
-				max = k;
-				printf("Mang 2 lon nhat");
-			}
-			else {
-				printf("Mang 1 lon nhat");
-			}
-		}
-		else if(ketQua3 == 1) {
-			int  Max = l;
-			if (Max < j) {
-				Max = j;
-				printf("Mang 1 lon nhat");
-			}
-			else {
-				printf("Mang 3 lon nhat");
-			}
-		}
-	}
-	else if (ketQua2 == 1) {
-		if (ketQua1 == 1) {
-			if (ketQua3 == 1) {
-				int max = j;
-				if (max < k) {
-					max = k;
-					printf("Mang 2 lon nhat");
-				}
-				else if (max < l) {
-					max = l;
-					printf("Mang 3 lon nhat");
-				}
-				else {
-					printf("Mang 1 lon nhat");
-				}
-				
-			}
-			int max = j;
-			if (max < k) {
-				max = k;
-				printf("Mang 2 lon nhat");
-			}
-			else {
-				printf("Mang 1 lon nhat");
-			}
-			
-		}
-		else if (ketQua3 == 1) {
-			int  Max = l;
-			if (Max < j) {
-				Max = j;
-				printf("Mang 1 lon nhat");
-			}
-			else {
-				printf("Mang 3 lon nhat");
-			}
-			
-		}
-	}
-	else if (ketQua3 == 1) {
-		if (ketQua1 == 1) {
-			if (ketQua3 == 1) {
-				int max = j;
-				if (max < k) {
-					max = k;
-					printf("Mang 2 lon nhat");
-				}
-				else if (max < l) {
-					max = l;
-					printf("Mang 3 lon nhat");
-				}
-				else {
-					printf("Mang 1 lon nhat");
-				}
-
-			}
-			int max = j;
-			if (max < k) {
-				max = k;
-				printf("Mang 2 lon nhat");
-			}
-			else {
-				printf("Mang 1 lon nhat");
-			}
-
-		}
-		else if (ketQua3 == 1) {
-			int  Max = l;
-			if (Max < j) {
-				Max = j;
-				printf("Mang 1 lon nhat");
-			}
-			else {
-				printf("Mang 3 lon nhat");
-			}
-
-		}
-	}
+	return max;
 }
+void mangKhongGiamDaiNhat(int x[],int n){
+	// 1 4 2 3 5 7 9
+	// 2 1 5 4 3 2 1
+	int temp[100];
+	for(int i=0;i<n;i++){
+			temp[i]=1;
+		}
+		for(int j=n-1;j>=0;j--){
+				if(x[j]>x[j-1]){
+					temp[j-1]=temp[j]+1;
+				}
+			}
+			int max=timMax(temp,n);
+			for(int i=0;i<n;i++){
+				if(x[i]==max){
+					for(int j=i;j<i+max;j++){
+						printf("%d ",x[j]);
+					}
+				}
+			}
+}
+
 int main() {
 	int a[100], n;
-	int arrCon1[100]; int arrCon2[100]; int arrCon3[100];
-	int j, k, l;
 	inputArr(a,&n);
 	outputArr(a, n);
-	if (kiemTraMangCon(a, n)) {
+	/*if (kiemTraMangCon(a, n)) {
 		printf("arrCon la Mang con cua Arr");
 	}
 	else {
 		printf("arrCon khong la Mang con cua Arr");
-	}
+	}*/
 }
