@@ -1,0 +1,3 @@
+﻿  Bai38.cpp
+F:\C++\Bai38\Bai38\Bai38.cpp(16,8): warning C4553: '==': result of expression not used; did you intend '='?
+  Bai38.vcxproj -> F:\C++\Bai38\x64\Debug\Bai38.exe

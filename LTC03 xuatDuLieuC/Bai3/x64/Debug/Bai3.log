@@ -1,0 +1,5 @@
+﻿  Bai3.cpp
+F:\C++\Bai3\Bai3\Bai3.cpp(14,27): warning C4305: 'initializing': truncation from 'double' to 'float'
+F:\C++\Bai3\Bai3\Bai3.cpp(17,22): warning C4305: 'initializing': truncation from 'double' to 'float'
+F:\C++\Bai3\Bai3\Bai3.cpp(18,22): warning C4305: 'initializing': truncation from 'double' to 'float'
+  Bai3.vcxproj -> F:\C++\Bai3\x64\Debug\Bai3.exe

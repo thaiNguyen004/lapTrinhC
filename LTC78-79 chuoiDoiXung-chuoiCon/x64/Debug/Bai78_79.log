@@ -1,0 +1,4 @@
+﻿  Bai79.c
+F:\C++\Bai78_79\Bai79.c(22,16): warning C4047: '!=': 'int' differs in levels of indirection from 'void *'
+F:\C++\Bai78_79\Bai79.c(21,1): warning C4047: 'initializing': 'char' differs in levels of indirection from 'char *'
+  Bai78_79.vcxproj -> F:\C++\Bai78_79\x64\Debug\Bai78_79.exe
