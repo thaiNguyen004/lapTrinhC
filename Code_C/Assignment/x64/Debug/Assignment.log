@@ -1,0 +1,10 @@
+﻿  Assignment.c
+N:\Github\lapTrinhC\Code_C\Assignment\Assignment.c(108,34): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+N:\Github\lapTrinhC\Code_C\Assignment\Assignment.c(111,58): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+N:\Github\lapTrinhC\Code_C\Assignment\Assignment.c(119,22): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+N:\Github\lapTrinhC\Code_C\Assignment\Assignment.c(190,23): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+N:\Github\lapTrinhC\Code_C\Assignment\Assignment.c(206,32): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+N:\Github\lapTrinhC\Code_C\Assignment\Assignment.c(272,2): warning C4013: 'srand' undefined; assuming extern returning int
+N:\Github\lapTrinhC\Code_C\Assignment\Assignment.c(272,8): warning C4013: 'time' undefined; assuming extern returning int
+N:\Github\lapTrinhC\Code_C\Assignment\Assignment.c(286,19): warning C4013: 'rand' undefined; assuming extern returning int
+  Assignment.vcxproj -> N:\Github\lapTrinhC\Code_C\Assignment\x64\Debug\Assignment.exe
