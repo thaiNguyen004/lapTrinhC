@@ -1,0 +1,5 @@
+﻿  Bai69.c
+F:\FPT Polytechnic\FPT Polytechnic\COM108 Nhap mon lap trinh\Lab\Bai69\Bai69.c(16,14): warning C4553: '==': result of expression not used; did you intend '='?
+F:\FPT Polytechnic\FPT Polytechnic\COM108 Nhap mon lap trinh\Lab\Bai69\Bai69.c(26,9): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'size_t'
+F:\FPT Polytechnic\FPT Polytechnic\COM108 Nhap mon lap trinh\Lab\Bai69\Bai69.c(26,9): message : consider using '%zd' in the format string
+  Bai69.vcxproj -> F:\FPT Polytechnic\FPT Polytechnic\COM108 Nhap mon lap trinh\Lab\Bai69\x64\Debug\Bai69.exe
