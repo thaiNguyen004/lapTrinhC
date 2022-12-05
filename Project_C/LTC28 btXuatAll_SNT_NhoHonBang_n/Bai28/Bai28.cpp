@@ -13,7 +13,7 @@ int main() {
 	int n;
 	nguyen:
 	printf("Nhap n:");
-	scanf("%d", &n);
+	scanf_s("%d", &n);
 	if (n <= 0) goto nguyen;
 	for (int i = 2; i <= n; i++) {
 		if (kiemtrasnt(i)) {

@@ -312,77 +312,77 @@ void FPOLYLOTT() {
 	}
 }
 
-struct phanSo {
-	int tuSo;
-	int mauSo;
-}ps1,ps2;
-void nhapPhanSo(struct phanSo *ps) {
-	printf("\nNHAP PHAN SO \n");
-	printf("Nhap tu so: ");
-	scanf_s("%d", &ps->tuSo);
-	do {
-		printf("Nhap mau so: ");
-		scanf_s("%d", &ps->mauSo);
-	} while (ps->mauSo == 0);
-}
-void rutgonphanso(struct phanSo *ps) {
-	int uscln = 1;
-	int a = abs(ps->tuSo);
-	int b = abs(ps->mauSo);
-	if (a == 0) {
-		uscln = a;
+	struct phanSo {
+		int tuSo;
+		int mauSo;
+	}ps1,ps2;
+	void nhapPhanSo(struct phanSo *ps) {
+		printf("\nNHAP PHAN SO \n");
+		printf("Nhap tu so: ");
+		scanf_s("%d", &ps->tuSo);
+		do {
+			printf("Nhap mau so: ");
+			scanf_s("%d", &ps->mauSo);
+		} while (ps->mauSo == 0);
 	}
-	else {
-		while (a != b) {
-			if (a > b) {
-				a -= b;
-			}
-			else {
-				b -= a;
-			}
+	void rutgonphanso(struct phanSo *ps) {
+		int uscln = 1;
+		int a = abs(ps->tuSo);
+		int b = abs(ps->mauSo);
+		if (a == 0) {
+			uscln = a;
 		}
-		uscln = a;
+		else {
+			while (a != b) {
+				if (a > b) {
+					a -= b;
+				}
+				else {
+					b -= a;
+				}
+			}
+			uscln = a;
+		}
+		ps->tuSo /= uscln;
+		ps->mauSo /= uscln;
 	}
-	ps->tuSo /= uscln;
-	ps->mauSo /= uscln;
-}
-void xuatPhanSo(struct phanSo ps) {
-	rutgonphanso(&ps);
-	if (ps.mauSo < 0) {
-		ps.tuSo *= -1;
-		ps.mauSo *= -1;
+	void xuatPhanSo(struct phanSo ps) {
+		rutgonphanso(&ps);
+		if (ps.mauSo < 0) {
+			ps.tuSo *= -1;
+			ps.mauSo *= -1;
+		}
+		if (ps.mauSo == 1) {
+			printf("%d", ps.tuSo);
+		}
+		else {
+			printf("%d/%d", ps.tuSo, ps.mauSo);
+		}
 	}
-	if (ps.mauSo == 1) {
-		printf("%d", ps.tuSo);
+	struct phanSo cong(struct phanSo ps1, struct phanSo ps2) {
+		struct phanSo ketqua;
+		ketqua.tuSo = ps1.tuSo * ps2.mauSo + ps1.mauSo * ps2.tuSo;
+		ketqua.mauSo = ps1.mauSo * ps2.mauSo;
+		return ketqua;
 	}
-	else {
-		printf("%d/%d", ps.tuSo, ps.mauSo);
+	struct phanSo tru(struct phanSo ps1, struct phanSo ps2) {
+		struct phanSo ketqua;
+		ketqua.tuSo = ps1.tuSo * ps2.mauSo - ps1.mauSo * ps2.tuSo;
+		ketqua.mauSo = ps1.mauSo * ps2.mauSo;
+		return ketqua;
 	}
-}
-struct phanSo cong(struct phanSo ps1, struct phanSo ps2) {
-	struct phanSo ketqua;
-	ketqua.tuSo = ps1.tuSo * ps2.mauSo + ps1.mauSo * ps2.tuSo;
-	ketqua.mauSo = ps1.mauSo * ps2.mauSo;
-	return ketqua;
-}
-struct phanSo tru(struct phanSo ps1, struct phanSo ps2) {
-	struct phanSo ketqua;
-	ketqua.tuSo = ps1.tuSo * ps2.mauSo - ps1.mauSo * ps2.tuSo;
-	ketqua.mauSo = ps1.mauSo * ps2.mauSo;
-	return ketqua;
-}
-struct phanSo nhan(struct phanSo ps1, struct phanSo ps2) {
-	struct phanSo ketqua;
-	ketqua.tuSo = ps1.tuSo * ps2.tuSo;
-	ketqua.mauSo = ps1.mauSo * ps2.mauSo;
-	return ketqua;
-}
-struct phanSo chia(struct phanSo ps1, struct phanSo ps2) {
-	struct phanSo ketqua;
-	ketqua.tuSo = ps1.tuSo * ps2.mauSo;
-	ketqua.mauSo = ps1.mauSo * ps2.tuSo;
-	return ketqua;
-}
+	struct phanSo nhan(struct phanSo ps1, struct phanSo ps2) {
+		struct phanSo ketqua;
+		ketqua.tuSo = ps1.tuSo * ps2.tuSo;
+		ketqua.mauSo = ps1.mauSo * ps2.mauSo;
+		return ketqua;
+	}
+	struct phanSo chia(struct phanSo ps1, struct phanSo ps2) {
+		struct phanSo ketqua;
+		ketqua.tuSo = ps1.tuSo * ps2.mauSo;
+		ketqua.mauSo = ps1.mauSo * ps2.tuSo;
+		return ketqua;
+	}
 int main() {
 	int goloi;
 	int menu;
